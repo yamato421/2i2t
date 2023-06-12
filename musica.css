@@ -3,14 +3,91 @@
     margin: 0;
 
 }
-body{
-    background-color: darkmagenta;
-}
-.menu{
-    width: 100;
-    height: 60px;
-    background-color: blueviolet;
+:root{
+    --fundo: rgba(4, 0, 255, 0.863);
+    --fonte: rgb(247, 247, 247);
+    --hover: rgb(28, 1, 46,);
 
+
+}
+body{
+    background-color: rgba(6, 22, 245, 0.822);
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.header{
+
+    background-color: var(--fonte);
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+}
+.logo{
+    display: inline-block;
+   color: var(--fundo);
+   font-size: 32px;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: var(--fundo);
+    overflow: hidden;
+}
+.nav a{
+    display: block;
+    padding: 30px;
+    color: var(--fonte);
+}
+.nav a:hover{
+    background-color: var(--hover);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.hamburger{
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line{
+    background: var(--fonte);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--fonte);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu{
+    display: none;
+}
+.side-menu:checked ~ nav{
+    max-width: 100%;
+}
+.side-menu:checked ~ .hamburger .hamb-line{
+    background: transparent;
 }
 .conteudo-musica{
      width: 100%;
@@ -18,7 +95,7 @@ body{
 }
 .rodape{
     width: 100%;
-    background-color: darkorchid;
+    background-color: rgb(0, 25, 253);
     text-align: center  ;
 }
 .desc-estilo{
@@ -47,3 +124,28 @@ background-color: rgb(8, 0, 117);
 .img-ini{
     width: 100%;
 }
+@media screen and (min-width: 768px){
+    .menu{
+       height: 120px;
+       background-color: rgb(94, 94, 238);
+       font-size: 32px;
+       color: white;
+    }
+    .desc-solo{
+       display: flex;
+    }
+   }
+   
+   @media screen and (min-width: 1280px){
+       .menu{
+          height: 200px;
+          background-color: rgb(37, 37, 241);
+          font-size: 64px;
+       }
+       .img-ini{
+           width: 50%;
+       }
+       .desc-solo{
+           display: flex;
+       }
+      }
