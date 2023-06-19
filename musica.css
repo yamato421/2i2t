@@ -5,7 +5,7 @@
 }
 :root{
     --fundo: rgba(4, 0, 255, 0.863);
-    --fonte: rgb(247, 247, 247);
+    --fonte: rgb(0, 0, 0);
     --hover: rgb(28, 1, 46,);
 
 
@@ -31,6 +31,11 @@ ul{
     display: inline-block;
    color: var(--fundo);
    font-size: 32px;
+  
+}
+#logo{
+  height: 10vh;
+
 }
 .nav{
     width: 100%;
@@ -39,17 +44,18 @@ ul{
     background: var(--fundo);
     overflow: hidden;
 }
-.nav a{
+.menu a{
     display: block;
     padding: 30px;
     color: var(--fonte);
+    
 }
-.nav a:hover{
+.menu a:hover{
     background-color: var(--hover);
 }
 .nav{
     max-height: 0;
-    transition: max-height .5s ease-out;
+    transition: max-height .1s ease-out;
 }
 .hamburger{
     cursor: pointer;
@@ -71,7 +77,7 @@ ul{
     display: block;
     height: 100%;
     position: absolute;
-    transition: all 2s ease-out;
+    transition: all .2s ease-out;
     width: 100%;
 }
 .hamb-line::before{
@@ -84,10 +90,19 @@ ul{
     display: none;
 }
 .side-menu:checked ~ nav{
-    max-width: 100%;
+ max-height: 100%;
 }
+
 .side-menu:checked ~ .hamburger .hamb-line{
     background: transparent;
+}
+.side-menu:checked ~ .hamburger .hamb-line::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.side-menu:checked ~ .hamburger .hamb-line::after{
+    transform: rotate(+45deg);
+    top: 0;
 }
 .conteudo-musica{
      width: 100%;
@@ -125,16 +140,33 @@ background-color: rgb(8, 0, 117);
     width: 100%;
 }
 @media screen and (min-width: 768px){
-    .menu{
-       height: 120px;
-       background-color: rgb(94, 94, 238);
-       font-size: 32px;
-       color: white;
-    }
-    .desc-solo{
-       display: flex;
-    }
+   .nav{
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
    }
+   .menu{
+    float: left;
+   }
+   .menu a:hover{
+    background-color: transparent;
+    color: var(--hover);
+   }
+   .hamburger{
+    display: none;
+   }
+   #logo{
+    width:25vh;
+    height: 25vh; 
+    
+
+   }
+    }
+
+   
    
    @media screen and (min-width: 1280px){
        .menu{
