@@ -4,14 +4,14 @@
 
 }
 :root{
-    --fundo: rgba(4, 0, 255, 0.863);
-    --fonte: rgb(255, 255, 255);
+    --fundo: rgba(255, 255, 255, 0.863);
+    --fonte: rgb(0, 0, 0);
     --hover: rgb(0, 132, 255);
 
 
 }
 body{
-    background-color: rgba(6, 22, 245, 0.822);
+    background-color: rgba(255, 255, 255, 0.822);
 }
 a {
     text-decoration: none;
@@ -108,76 +108,127 @@ ul{
      width: 100%;
 
 }
+
 .rodape{
     width: 100%;
-    background-color: rgb(0, 25, 253);
+    background-color: rgb(255, 255, 255);
     text-align: center  ;
+}
+.definicao{
+    display: block;
+    width: 100vw;
+    grid-area: def;
+}
+.img-definicao{
+    display: none;
+
+}
+.descricao{
+    width:100vw;
 }
 .desc-estilo{
     width: 100;
-   background-color: rgb(5, 5, 248);
+   background-color: rgb(255, 255, 255);
 
 }
 .desc-solo{
     width: 100;
-background-color: rgb(2, 2, 187);
+background-color: rgb(255, 255, 255);
 
 }
 .desc-grupo{
     width: 100;
-background-color: rgb(19, 0, 146);
+background-color: rgb(255, 255, 255);
 
 }
 .desc-banda{
     width: 100;
-background-color: rgb(15, 0, 150) ;
+background-color: rgb(255, 255, 255) ;
 }
 .desc-app{
     width: 100;
-background-color: rgb(8, 0, 117);
+background-color: rgb(255, 255, 255);
 }
 .img-ini{
     width: 100%;
 }
-@media screen and (min-width: 768px){
-   .nav{
-    max-height: none;
-    top: 0;
-    position: relative;
-    float: right;
-    width: fit-content;
-    background-color: transparent;
-   }
-   .menu{
-    float: left;
-   }
-   .menu a:hover{
-    background-color: transparent;
-    color: var(--hover);
-   }
-   .hamburger{
-    display: none;
-   }
-   #logo{
-    width:25vh;
-    height: 25vh; 
+@media screen and (min-width: 820px){
+    .nav{
+     max-height: none;
+     top: 0;
+     position: relative;
+     float: right;
+     width: fit-content;
+     background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu{
+     float: left;
+    }
+    .menu a:hover{
+     background-color: transparent;
+     color: var(--hover);
+    }
+    .hamburger{
+     display: none;
+    }
+    #logo{
+     width:25vh;
+     height: 25vh; 
+    }
+    .conteudo-musica{
+     display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "def def";
+    }
+    .definicao{
+   display: flex;
+   width: 100%;
+    
+    }
+    .img-definicao{
+        display: block;
+        text-align: end;
+        height: 30vh;
+        width: 30vh;
+    
+    }
+    .descricao{
+        width:100vw;
+    }
+    }
     
 
-   }
-    }
-
    
    
-   @media screen and (min-width: 1280px){
-       .menu{
-          height: 200px;
-          background-color: rgb(37, 37, 241);
-          font-size: 64px;
-       }
-       .img-ini{
-           width: 50%;
-       }
-       .desc-solo{
-           display: flex;
-       }
-      }
+    @media screen and (min-width: 1024px){
+        .nav{
+         max-height: none;
+         top: 0;
+         position: relative;
+         float: right;
+         width: fit-content;
+         background-color: transparent;
+        }
+        .menu{
+         float: left;
+        }
+        .menu a:hover{
+         background-color: transparent;
+         color: var(--hover);
+        }
+        .hamburger{
+         display: none;
+        }
+        #logo{
+         width:25vh;
+         height: 25vh; 
+        }
+        .conteudo-musica{
+         display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-template-areas: "def def def";
+        }
+        }
