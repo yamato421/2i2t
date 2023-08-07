@@ -4,14 +4,14 @@
 
 }
 :root{
-    --fundo: rgba(255, 255, 255, 0.863);
-    --fonte: rgb(0, 0, 0);
+    --fundo: rgba(0, 0, 0, 0.39);
+    --fonte: rgb(255, 255, 255);
     --hover: rgb(0, 132, 255);
 
 
 }
 body{
-    background-color: rgba(255, 255, 255, 0.822);
+    background-color: rgba(0, 0, 0, 0.39);
 }
 a {
     text-decoration: none;
@@ -105,13 +105,14 @@ ul{
     top: 0;
 }
 .conteudo-musica{
-     width: 100%;
-
+    display: flex;
+     width: 100vw;
+     flex-direction: column;
 }
 
 .rodape{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.39);
     text-align: center  ;
 }
 .definicao{
@@ -128,29 +129,27 @@ ul{
 }
 .desc-estilo{
     width: 100;
-   background-color: rgb(255, 255, 255);
+   background-color: rgba(0, 0, 0, 0.39);
 
 }
-.desc-solo{
-    width: 100;
-background-color: rgb(255, 255, 255);
 
-}
-.desc-grupo{
-    width: 100;
-background-color: rgb(255, 255, 255);
-
-}
-.desc-banda{
-    width: 100;
-background-color: rgb(255, 255, 255) ;
-}
-.desc-app{
-    width: 100;
-background-color: rgb(255, 255, 255);
-}
 .img-ini{
     width: 100%;
+ 
+}
+.info {
+    width: 100vw;
+
+}
+div[class^="item-"]{
+    background-color: blueviolet;
+    margin-top: 2px;
+    height: 300px;
+    grid-area: "item";
+
+}
+.info{
+    display: grid;
 }
 @media screen and (min-width: 820px){
     .nav{
@@ -198,6 +197,13 @@ background-color: rgb(255, 255, 255);
     .descricao{
         width:100vw;
     }
+    .info{
+         grid-template-columns: 50% 50%;
+        grid-template-areas: "item" "item";    
+        }
+        div[class^="item-"]{
+            margin-right: 2px;
+        }
     }
     
 
@@ -231,4 +237,8 @@ background-color: rgb(255, 255, 255);
         grid-template-columns: 33% 34% 33%;
         grid-template-areas: "def def def";
         }
+        .info{
+            grid-template-columns: 33% 34% 33%;
+           grid-template-areas: "item" "item" "item";    
+           }
         }
