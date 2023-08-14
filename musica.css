@@ -134,7 +134,7 @@ ul{
 }
 
 .img-ini{
-    width: 100%;
+    width: 50%;
  
 }
 .info {
@@ -142,9 +142,9 @@ ul{
 
 }
 div[class^="item-"]{
-    background-color: blueviolet;
+    background-color: rgb(104, 102, 102);
     margin-top: 2px;
-    height: 300px;
+   
     grid-area: "item";
 
 }
@@ -179,8 +179,8 @@ div[class^="item-"]{
     }
     .conteudo-musica{
      display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "def def";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "def def def def";
     }
     .definicao{
    display: flex;
@@ -190,19 +190,19 @@ div[class^="item-"]{
     .img-definicao{
         display: block;
         text-align: end;
-        height: 30vh;
-        width: 30vh;
+        height:5px
+        width: 10vh;
     
     }
     .descricao{
         width:100vw;
     }
     .info{
-         grid-template-columns: 50% 50%;
-        grid-template-areas: "item" "item";    
+         grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: "item item item item";    
         }
         div[class^="item-"]{
-            margin-right: 2px;
+            margin-right: 1px;
         }
     }
     
@@ -241,4 +241,8 @@ div[class^="item-"]{
             grid-template-columns: 33% 34% 33%;
            grid-template-areas: "item" "item" "item";    
            }
+         
+           
+           
+        
         }
